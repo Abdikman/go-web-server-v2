@@ -1,0 +1,158 @@
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	margin: 0px 166px;
+}
+.header {
+	background-image: url(/img/bg.jpg);
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.header-line {
+	justify-content: space-around;
+	padding-top: 50px;
+	display: flex;
+	align-items: center;
+}
+.nav-item {
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 14px;
+	margin-right: 25px;
+	transition: color 0.3s linear;
+}
+
+.nav-item:hover {
+	color: #d62e18;
+}
+
+.cart {
+	position: relative;
+	border-right: 1px solid #ffffff;
+	padding-right: 10px;
+	height: 50px;
+}
+
+.cart-img {
+	position: absolute;
+	top: 18px;
+	right: 7px;
+}
+
+.num {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+	transition: color 0.3s linear;
+}
+
+.num:hover {
+	color: #d62e18;
+}
+
+.phone-text {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.phone-holder {
+	display: flex;
+	align-items: center;
+}
+
+.button {
+	background-color: #ff7400;
+	color: #fff;
+	text-decoration: none;
+	padding: 14px 18px;
+	font-weight: 700;
+	transition: background-color 0.2s linear;
+}
+.button:hover {
+	background-color: #a85715;
+}
+
+.header-down {
+	position: relative;
+}
+
+.header-title {
+	color: #d67e35;
+	font-family: 'Tinos', serif;
+	font-size: 50px;
+	font-weight: 400;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	margin-top: 222px;
+	margin-bottom: 12px;
+}
+
+.header-subtitle {
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+}
+.header-subtitle:after {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 61px;
+	background-color: #fff;
+	top: 127px;
+	left: 56px;
+}
+
+.header-subtitle:before {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 61px;
+	background-color: #fff;
+	top: 127px;
+	left: 308px;
+}
+
+.header-button {
+	background-color: #ff7400;
+	padding: 14px 28px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	transition: background-color 0.3s linear;
+}
+
+.header-button:hover {
+	background-color: #a05416;
+}
+
+.cards-holder {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card {
+	width: 33%;
+	box-shadow: 10px 10px 40px 20px #0000001a;
+}
+
+.card-image {
+	display: flex;
+	justify-content: center;
+}
+.card-title {
+	display: flex;
+	justify-content: center;
+}
+.card-desc {
+	display: flex;
+	justify-content: center;
+}
