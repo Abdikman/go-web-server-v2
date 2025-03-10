@@ -39,3 +39,15 @@ func AuthMiddleware(next http.Handler) http.Handler {
 		next.ServeHTTP(w, r)
 	})
 }
+
+// Блокируем скачивание файлов
+func BlockFileDownload(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		// Проверяем, если запрос содержит "download", запрещаем доступ
+		if r.URL.Query().Get("download") == "true" {
+			http.Error(w, "Скачивание запрещено", http.StatusForbidden)
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
+}
