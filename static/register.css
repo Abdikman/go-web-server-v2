@@ -1,0 +1,106 @@
+body {
+	font-family: 'sans-serif';
+	text-align: center;
+	margin: 50px auto;
+}
+
+h1 {
+	font-family: sans-serif;
+	margin-top: 0;
+}
+
+p {
+	margin-top: 8px;
+	margin-bottom: 23px;
+}
+
+.login-page {
+	width: 390px;
+	padding: 8% 0 0;
+	margin: auto;
+}
+
+.form {
+	position: relative;
+	background-color: white;
+	max-width: 360px;
+	margin: 0 auto 0;
+	padding: 45px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+	background-color: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 17px;
+	box-sizing: border-box;
+}
+
+.form button {
+	width: 100%;
+	font-size: 14px;
+	font-weight: 700;
+	background-color: #af18f5;
+	color: #fff;
+	cursor: pointer;
+	padding: 15px;
+	border: 0;
+}
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+	background-color: #8111b5;
+}
+
+.member {
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 1px;
+	box-sizing: border-box;
+	color: rgb(191, 187, 187);
+}
+
+.form input[type='checkbox'] {
+	width: 18px;
+	height: 18px;
+	padding: 0px;
+	margin: 0px;
+	appearance: none;
+	-webkit-appearance: none;
+	background-color: white;
+	border: 3px solid #af18f5;
+}
+
+.form input[type='checkbox']:checked::after {
+	padding: 4px 2px 0px 2px;
+	background-color: #af18f5;
+	/* border: 1px solid #af18f5; */
+	content: '\2714';
+	font-size: 12px;
+	color: white;
+}
+
+input::placeholder {
+	font-size: 13px;
+	color: grey;
+	/* padding-left: 20px; */
+	font-weight: 560;
+	font-family: sans-serif;
+}
+
+#forgot {
+	padding: 0px;
+	margin: 0 0 0 44%;
+	width: 100%;
+	border: 0;
+	color: #9e17dc;
+	text-decoration: none;
+	font-size: small;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}

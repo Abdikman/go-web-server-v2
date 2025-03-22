@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Страница Регистрации</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/static/register.css" />
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p class="browsehappy">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="#">upgrade your browser</a> to improve your experience.
+			</p>
+		<![endif]-->
+		<div class="login-page">
+			<div class="form">
+				<form action="/register" method="POST" class="login-form">
+					<h1>LOGIN</h1>
+
+					<input type="text" name="username" placeholder="Username" />
+
+					<input type="password" name="password" placeholder="Password" />
+
+					<p>
+						<input type="checkbox" class="member" name="check" />
+						<label class="member">Remember me</label>
+						<a href="index2.html" id="forgot">Forgot?</a>
+					</p>
+
+					<button type="submit">Login</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
