@@ -19,6 +19,22 @@ func main() {
 	// Подключаем базу данных
 	database.ConnectDB()
 
+	// var users []models.User
+	// result := database.DB.Find(&users)
+	// if result.Error != nil {
+	// 	log.Fatal("Ошибка запроса:", result.Error)
+	// }
+
+	// fmt.Println("Список пользователей:")
+	// for _, user := range users {
+	// 	fmt.Printf("ID: %d, Username: %s Password: %s\n", user.ID, user.Username, user.Password)
+	// }
+
+	// // Удаление всех записей
+	// database.DB.Exec("TRUNCATE TABLE users RESTART IDENTITY CASCADE;")
+
+	// fmt.Println("✅ База данных очищена!")
+
 	// Создаём маршруты
 	r := mux.NewRouter()
 
@@ -30,7 +46,12 @@ func main() {
 	r.PathPrefix("/static/").Handler(middleware.BlockFileDownload(staticHandler))
 	r.PathPrefix("/img/").Handler((imgHandler))
 
-	r.HandleFunc("/", handlers.HomeHandler).Methods("GET")
+	// GET-запросы
+	r.HandleFunc("/", handlers.WithTemplateFile("templates/index.html", handlers.HomeHandler)).Methods("GET")
+	r.HandleFunc("/register", handlers.WithTemplateFile("templates/register.html", handlers.HomeHandler)).Methods("GET")
+	r.HandleFunc("/users", handlers.GetUsersHandler).Methods("GET")
+
+	// POST-запросы
 	r.HandleFunc("/register", handlers.RegisterHandler).Methods("POST")
 	r.HandleFunc("/login", handlers.LoginHandler).Methods("POST")
 
