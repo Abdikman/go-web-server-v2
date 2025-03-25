@@ -31,7 +31,7 @@ func main() {
 	// }
 
 	// // Удаление всех записей
-	// database.DB.Exec("TRUNCATE TABLE users RESTART IDENTITY CASCADE;")
+	// database.DB.Where("1 = 1").Delete(&models.User{})
 
 	// fmt.Println("✅ База данных очищена!")
 
